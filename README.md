@@ -31,6 +31,27 @@ npm start
 
 Opens at `http://localhost:3002` with live reload enabled.
 
+## Deployment
+
+### Manual Deploy
+```bash
+npm run deploy
+```
+
+### Automatic Deploy (GitHub Actions)
+
+Pushes to `main` branch automatically deploy to Firebase Hosting.
+
+**Required GitHub Secrets:**
+- `FIREBASE_SERVICE_ACCOUNT` - Service account JSON (from Firebase Console → Project Settings → Service Accounts)
+- `FIREBASE_PROJECT_ID` - Your Firebase project ID
+
+**Setup:**
+1. Create Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
+2. Update `.firebaserc` with your project ID
+3. Generate service account key and add to GitHub secrets
+4. Push to `main` branch to trigger deployment
+
 ## Design System
 
 ### Colors

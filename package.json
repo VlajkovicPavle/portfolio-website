@@ -2,10 +2,12 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "scripts": {
-    "start": "browser-sync start --server src --files 'src/**/*'"
+    "start": "browser-sync start --server src --files 'src/**/*'",
+    "deploy": "firebase deploy --only hosting"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
+    "firebase-tools": "^14.20.0",
     "prettier": "^3.6.2"
   }
 }
