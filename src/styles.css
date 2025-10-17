@@ -16,6 +16,6 @@
 
 body {
   font-family: "Bayer Universal", "Arial", sans-serif;
-  background-color: #ffffff;
-  color: #000;
+  background-color: var(--background);
+  color: var(--text-primary);
 }
