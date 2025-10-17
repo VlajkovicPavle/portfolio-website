@@ -1,7 +1,248 @@
-.landing {
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Futura", "Arial", sans-serif;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Landing Page Section Styles */
+.landing-section {
+  width: 100%;
+  height: 100vh;
+}
+
+.landing-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+/* Left Section - Content */
+.left-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-left: 120px;
+  position: relative;
+  z-index: 2;
+}
+
+.name {
+  font-size: 96px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  line-height: 0.85;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  transition: transform 0.2s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  transform: translateX(8px);
+}
+
+/* Right Section - Geometric */
+.right-section {
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* Precise Geometric Elements */
+.red-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background-color: #dd2e2e;
+  top: 15%;
+  right: 20%;
+  z-index: 3;
+}
+
+.blue-square {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: #1e56a0;
+  bottom: 25%;
+  right: 15%;
+  z-index: 2;
+}
+
+.yellow-circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #ffd700;
+  bottom: 20%;
+  left: 10%;
+  z-index: 1;
+}
+
+/* Vertical Line Accent */
+.vertical-line {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #000;
+  left: 0;
+  top: 0;
+}
+
+/* Horizontal Line */
+.horizontal-line {
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  background-color: #dd2e2e;
+  top: 50%;
+  left: -100px;
+  z-index: 1;
+}
+
+/* Small Square Accent */
+.small-square {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  top: 60px;
+  left: 120px;
+}
+
+/* Stacked Shapes on Right */
+.stacked-shapes {
+  position: absolute;
+  bottom: 80px;
+  right: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+}
+
+.shape-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #dd2e2e;
+}
+
+.shape-square {
+  width: 50px;
+  height: 50px;
+  background-color: #1e56a0;
+}
+
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 43px solid #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .landing-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .left-section {
+    padding: 80px 40px;
+    min-height: 100vh;
+  }
+
+  .right-section {
+    height: 400px;
+  }
+
+  .name {
+    font-size: 64px;
+  }
+
+  .small-square {
+    left: 40px;
+  }
+
+  .stacked-shapes {
+    right: 40px;
+    bottom: 60px;
+  }
+
+  .shape-circle,
+  .shape-square {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shape-triangle {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid #ffd700;
+  }
+
+  .red-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .blue-square {
+    width: 120px;
+    height: 120px;
+  }
+
+  .yellow-circle {
+    width: 100px;
+    height: 100px;
+  }
 }
