@@ -1,8 +1,20 @@
-/* Bayer Universal Font */
+@import "./variables.css";
+
+/* Bayer Universal - Display Font */
 @font-face {
   font-family: "Bayer Universal";
   src: url("assets/fonts/P22-Bayer-Universal-Regular.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Outfit - Body Font */
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/Outfit-VariableFont_wght.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -14,8 +26,14 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Bayer Universal", "Arial", sans-serif;
-  background-color: var(--background);
-  color: var(--text-primary);
+html {
+  /* Responsive font scaling formula:
+   * clamp(min_font, min_font + (max_font - min_font) * ((100vw - min_screen) / (max_screen - min_screen)), max_font)
+   * Creates linear interpolation: font grows proportionally as viewport increases from min_screen to max_screen
+   */
+  font-size: clamp(
+    14px,
+    calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320))),
+    20px
+  );
 }
