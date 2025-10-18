@@ -32,6 +32,13 @@
   --space-xl: calc(
     var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio)
   );
+  --space-2xl: calc(
+    var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
+  --space-3xl: calc(
+    var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio) * var(--ratio)
+  );
 
   /* Typography Scale */
   --text-sm: calc(1rem / var(--ratio));
@@ -41,5 +48,17 @@
   --text-2xl: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio));
   --text-3xl: calc(
     1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
+  --text-4xl: calc(
+    1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio)
+  );
+  --text-5xl: calc(
+    1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio) * var(--ratio)
+  );
+  --text-6xl: calc(
+    1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio) * var(--ratio) * var(--ratio)
   );
 }
