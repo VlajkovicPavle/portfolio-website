@@ -35,7 +35,7 @@
     }
     hr {
       width: var(--space-3xl);
-      height: 0.5rem;
+      height: var(--space-xs);
       background-color: var(--bauhaus-red);
       border: none;
     }
@@ -48,7 +48,12 @@
 
   #topRightCircle {
     grid-area: 2 / 7 / 4 / 9;
-    background-color: rgba(163, 208, 80, 0.5);
+    .circle {
+      width: var(--shape-md);
+      height: var(--shape-md);
+      background: var(--bauhaus-blue);
+      border-radius: 50%;
+    }
   }
 
   #bottomRightFormation {
@@ -58,7 +63,12 @@
 
   #midCircle {
     grid-area: 7 / 5 / 9 / 7;
-    background-color: rgba(205, 107, 206, 0.5);
+    .circle {
+      width: var(--shape-sm);
+      height: var(--shape-sm);
+      background: var(--bauhaus-yellow);
+      border-radius: 50%;
+    }
   }
 
   #bottomRightSquare {
