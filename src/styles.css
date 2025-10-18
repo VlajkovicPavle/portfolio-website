@@ -1,10 +1,20 @@
 @import "./variables.css";
 
-/* Bayer Universal Font */
+/* Bayer Universal - Display Font */
 @font-face {
   font-family: "Bayer Universal";
   src: url("assets/fonts/P22-Bayer-Universal-Regular.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Outfit - Body Font */
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/Outfit-VariableFont_wght.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -26,10 +36,4 @@ html {
     calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320))),
     20px
   );
-}
-
-body {
-  font-family: "Bayer Universal", "Arial", sans-serif;
-  background-color: var(--background);
-  color: var(--text-primary);
 }

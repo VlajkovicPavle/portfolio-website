@@ -16,6 +16,10 @@
   --accent-gray: light-dark(#c8c8c8, #3a3a3a);
   --accent-dark: light-dark(#1a1a1a, #e8e8e8);
 
+  /* Font Families */
+  --font-display: "Bayer Universal", sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+
   /* Modular Scale - Perfect Fourth (1.333) */
   --base-size: 1rem;
   --ratio: 1.333;
@@ -25,7 +29,9 @@
   --space-sm: var(--base-size);
   --space-md: calc(var(--base-size) * var(--ratio));
   --space-lg: calc(var(--base-size) * var(--ratio) * var(--ratio));
-  --space-xl: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
+  --space-xl: calc(
+    var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
 
   /* Typography Scale */
   --text-sm: calc(1rem / var(--ratio));
@@ -33,5 +39,7 @@
   --text-lg: calc(1rem * var(--ratio));
   --text-xl: calc(1rem * var(--ratio) * var(--ratio));
   --text-2xl: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio));
-  --text-3xl: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+  --text-3xl: calc(
+    1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
 }
