@@ -15,4 +15,23 @@
   /* Accents */
   --accent-gray: light-dark(#c8c8c8, #3a3a3a);
   --accent-dark: light-dark(#1a1a1a, #e8e8e8);
+
+  /* Modular Scale - Perfect Fourth (1.333) */
+  --base-size: 1rem;
+  --ratio: 1.333;
+
+  /* Spacing Scale */
+  --space-xs: calc(var(--base-size) / var(--ratio));
+  --space-sm: var(--base-size);
+  --space-md: calc(var(--base-size) * var(--ratio));
+  --space-lg: calc(var(--base-size) * var(--ratio) * var(--ratio));
+  --space-xl: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
+
+  /* Typography Scale */
+  --text-sm: calc(1rem / var(--ratio));
+  --text-base: 1rem;
+  --text-lg: calc(1rem * var(--ratio));
+  --text-xl: calc(1rem * var(--ratio) * var(--ratio));
+  --text-2xl: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio));
+  --text-3xl: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
 }
