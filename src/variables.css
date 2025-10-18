@@ -11,6 +11,8 @@
   --surface: light-dark(#ffffff, #1a1a1a);
   --text-primary: light-dark(#000000, #fafafa);
   --text-secondary: light-dark(#4a4a4a, #b8b8b8);
+  --inverse-bg: light-dark(#0d0d0d, #fafafa);
+  --inverse-surface: light-dark(#1a1a1a, #ffffff);
 
   /* Accents */
   --accent-gray: light-dark(#c8c8c8, #3a3a3a);
@@ -24,22 +26,33 @@
   --base-size: 1rem;
   --ratio: 1.333;
 
-  /* Spacing Scale */
-  --space-xs: calc(var(--base-size) / var(--ratio));
-  --space-sm: var(--base-size);
-  --space-md: calc(var(--base-size) * var(--ratio));
-  --space-lg: calc(var(--base-size) * var(--ratio) * var(--ratio));
-  --space-xl: calc(
-    var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio)
-  );
+  /* Spacing Scale - Perfect Fourth (1.333) */
+  --space-xs: 0.75rem; /* 1 / 1.333 */
+  --space-sm: 1rem;
+  --space-md: 1.333rem; /* 1 * 1.333 */
+  --space-lg: 1.777rem; /* 1.333^2 */
+  --space-xl: 2.369rem; /* 1.333^3 */
+  --space-2xl: 3.157rem; /* 1.333^4 */
+  --space-3xl: 4.209rem; /* 1.333^5 */
 
-  /* Typography Scale */
-  --text-sm: calc(1rem / var(--ratio));
+  /* Typography Scale - Perfect Fourth (1.333) */
+  --text-sm: 0.75rem; /* 1 / 1.333 */
   --text-base: 1rem;
-  --text-lg: calc(1rem * var(--ratio));
-  --text-xl: calc(1rem * var(--ratio) * var(--ratio));
-  --text-2xl: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio));
-  --text-3xl: calc(
-    1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
-  );
+  --text-lg: 1.333rem; /* 1 * 1.333 */
+  --text-xl: 1.777rem; /* 1.333^2 */
+  --text-2xl: 2.369rem; /* 1.333^3 */
+  --text-3xl: 3.157rem; /* 1.333^4 */
+  --text-4xl: 4.209rem; /* 1.333^5 */
+  --text-5xl: 5.61rem; /* 1.333^6 */
+  --text-6xl: 7.478rem; /* 1.333^7 */
+
+  /* Shape Scale - Golden Ratio (1.618) */
+  --shape-ratio: 1.618;
+
+  /* Responsive shape tokens using min(rem, vw) pattern */
+  --shape-xs: min(3.82rem, 7.64vw); /* 10rem / 1.618^2, 20vw / 1.618^2 */
+  --shape-sm: min(6.18rem, 12.36vw); /* 10rem / 1.618, 20vw / 1.618 */
+  --shape-md: min(10rem, 20vw); /* Base size */
+  --shape-lg: min(16.18rem, 32.36vw); /* 10rem * 1.618, 20vw * 1.618 */
+  --shape-xl: min(26.18rem, 52.36vw); /* 10rem * 1.618^2, 20vw * 1.618^2 */
 }
