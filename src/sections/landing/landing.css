@@ -4,7 +4,7 @@
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
-  gap: 0;
+  gap: var(--space-xs);
   width: 100%;
   height: 100vh;
 
@@ -66,7 +66,34 @@
 
   #bottomRightFormation {
     grid-area: 5 / 6 / 7 / 7;
-    background-color: rgba(81, 35, 131, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-xs);
+    .circle {
+      width: var(--shape-xs);
+      height: var(--shape-xs);
+      background: var(--bauhaus-red);
+      border-radius: 50%;
+    }
+    .square {
+      width: var(--shape-xs);
+      height: var(--shape-xs);
+      margin-right: var(--space-3xl);
+      background-color: var(--bauhaus-blue);
+    }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-bottom: var(--shape-xs) solid var(--bauhaus-yellow);
+      border-left: calc(var(--shape-xs) / 2) solid transparent;
+      border-right: calc(var(--shape-xs) / 2) solid transparent;
+    }
+    .circle,
+    .square,
+    .triangle {
+      margin-right: var(--space-3xl);
+    }
   }
 
   #midCircle {
@@ -81,7 +108,9 @@
 
   #bottomRightSquare {
     grid-area: 3 / 5 / 5 / 7;
-    direction: rtl;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     .square {
       width: var(--shape-sm);
       height: var(--shape-sm);
