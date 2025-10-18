@@ -10,10 +10,12 @@
 
   #infoSection {
     grid-area: 3 / 1 / 6 / 3;
-    > div {
+    > div,
+    h2,
+    nav {
       margin: var(--space-sm) var(--space-sm) var(--space-xs) var(--space-3xl);
     }
-    #fullNameSection {
+    #fullNameSection h1 {
       font-family: var(--font-display);
       font-size: var(--text-5xl);
       line-height: 0.85;
