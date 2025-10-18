@@ -1,0 +1,163 @@
+/* ============================================
+   ANIMATION CONFIGURATION
+   ============================================ */
+
+:root {
+  --anim-duration: 0.6s;
+  --anim-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --anim-easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --anim-delay-1: 0.15s;
+  --anim-delay-2: 0.3s;
+  --anim-delay-3: 0.35s;
+  --anim-delay-4: 0.45s;
+  --anim-delay-5: 0.55s;
+  --anim-delay-6: 0.65s;
+  --anim-delay-7: 0.75s;
+  --anim-delay-8: 0.85s;
+  --anim-delay-9: 0.95s;
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInY {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInX {
+  from {
+    opacity: 0;
+    transform: translateX(var(--slide-distance, -30px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: var(--target-width, 100%);
+  }
+}
+
+/* ============================================
+   BASE ANIMATION CLASSES
+   ============================================ */
+
+[class*="animate-"] {
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) forwards;
+}
+
+.animate-scale-in-delay-1 {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) var(--anim-delay-1)
+    forwards;
+}
+
+.animate-scale-in-delay-2 {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) var(--anim-delay-2)
+    forwards;
+}
+
+.animate-scale-in-delay-3 {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) var(--anim-delay-3)
+    forwards;
+}
+
+.animate-scale-in-delay-4 {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) var(--anim-delay-4)
+    forwards;
+}
+
+.animate-scale-in-delay-5 {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) var(--anim-delay-5)
+    forwards;
+}
+
+.animate-scale-in-delay-6 {
+  animation: scaleIn var(--anim-duration) var(--anim-easing) var(--anim-delay-6)
+    forwards;
+}
+
+.animate-triangle-slide {
+  animation: slideInY var(--anim-duration) var(--anim-easing)
+    var(--anim-delay-6) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInX var(--anim-duration) var(--anim-easing) forwards;
+}
+
+.animate-slide-right {
+  --slide-distance: 30px;
+  animation: slideInX var(--anim-duration) var(--anim-easing) forwards;
+}
+
+/* Text content animations - smooth, readable */
+.animate-text-fade-left {
+  animation: slideInX 0.8s var(--anim-easing-smooth) 0.2s forwards;
+}
+
+.animate-text-fade-left-delay-1 {
+  animation: slideInX 0.8s var(--anim-easing-smooth) 0.5s forwards;
+}
+
+.animate-line-expand {
+  animation: expandWidth 0.6s var(--anim-easing-smooth) 0.4s forwards;
+}
+
+.animate-link-1 {
+  animation: slideInX 0.6s var(--anim-easing-smooth) var(--anim-delay-6)
+    forwards;
+}
+
+.animate-link-2 {
+  animation: slideInX 0.6s var(--anim-easing-smooth) var(--anim-delay-7)
+    forwards;
+}
+
+.animate-link-3 {
+  animation: slideInX 0.6s var(--anim-easing-smooth) var(--anim-delay-8)
+    forwards;
+}

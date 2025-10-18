@@ -46,6 +46,7 @@
       }
     }
     hr {
+      --target-width: var(--space-3xl);
       width: var(--space-3xl);
       height: var(--space-xs);
       background-color: var(--bauhaus-red);
