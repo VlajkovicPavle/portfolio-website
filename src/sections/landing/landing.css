@@ -9,12 +9,9 @@
   height: 100vh;
 
   #infoSection {
-    grid-area: 4 / 1 / 7 / 4;
-    border: 2px solid red;
+    grid-area: 4 / 1 / 8 / 4;
     > div {
-      margin: var(--space-sm);
-      margin-left: var(--space-3xl);
-      margin-bottom: var(--space-xs);
+      margin: var(--space-sm) var(--space-sm) var(--space-xs) var(--space-3xl);
     }
     #fullNameSection {
       font-family: var(--font-display);
@@ -26,11 +23,21 @@
       margin-top: var(--space-xs);
       font-size: var(--text-lg);
     }
+    #linksSection {
+      display: flex;
+      margin-top: var(--space-xs);
+      flex-direction: column;
+      gap: var(--space-xs);
+      > a {
+        color: var(--text-primary);
+        text-decoration: none;
+      }
+    }
     hr {
       width: var(--space-3xl);
       height: 0.5rem;
       background-color: var(--bauhaus-red);
-      border: transparent;
+      border: none;
     }
   }
 
