@@ -34,6 +34,7 @@
         color: var(--text-primary);
         text-decoration: none;
         transition: color 0.3s ease;
+        white-space: nowrap;
         &:nth-child(1):hover {
           color: var(--bauhaus-red);
         }
