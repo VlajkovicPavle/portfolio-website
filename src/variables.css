@@ -2,17 +2,17 @@
   color-scheme: light dark;
 
   /* Primary Colors */
-  --bauhaus-red: light-dark(#E1000F, #D63447);
-  --bauhaus-blue: light-dark(#005CA9, #2C5F8D);
-  --bauhaus-yellow: light-dark(#FFCD00, #E8B923);
+  --bauhaus-red: light-dark(#e1000f, #d63447);
+  --bauhaus-blue: light-dark(#005ca9, #2c5f8d);
+  --bauhaus-yellow: light-dark(#ffcd00, #e8b923);
 
   /* Neutrals */
-  --background: light-dark(#FAFAFA, #0D0D0D);
-  --surface: light-dark(#FFFFFF, #1A1A1A);
-  --text-primary: light-dark(#000000, #FAFAFA);
-  --text-secondary: light-dark(#4A4A4A, #B8B8B8);
+  --background: light-dark(#fafafa, #0d0d0d);
+  --surface: light-dark(#ffffff, #1a1a1a);
+  --text-primary: light-dark(#000000, #fafafa);
+  --text-secondary: light-dark(#4a4a4a, #b8b8b8);
 
   /* Accents */
-  --accent-gray: light-dark(#C8C8C8, #3A3A3A);
-  --accent-dark: light-dark(#1A1A1A, #E8E8E8);
+  --accent-gray: light-dark(#c8c8c8, #3a3a3a);
+  --accent-dark: light-dark(#1a1a1a, #e8e8e8);
 }
