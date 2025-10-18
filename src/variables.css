@@ -11,6 +11,8 @@
   --surface: light-dark(#ffffff, #1a1a1a);
   --text-primary: light-dark(#000000, #fafafa);
   --text-secondary: light-dark(#4a4a4a, #b8b8b8);
+  --inverse-bg: light-dark(#0d0d0d, #fafafa);
+  --inverse-surface: light-dark(#1a1a1a, #ffffff);
 
   /* Accents */
   --accent-gray: light-dark(#c8c8c8, #3a3a3a);

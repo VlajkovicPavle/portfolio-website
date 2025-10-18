@@ -2,14 +2,14 @@
 
 #landing-page-layout {
   display: grid;
-  grid-template-rows: repeat(9, 1fr);
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0;
   width: 100%;
   height: 100vh;
 
   #infoSection {
-    grid-area: 4 / 1 / 8 / 4;
+    grid-area: 3 / 1 / 6 / 3;
     > div {
       margin: var(--space-sm) var(--space-sm) var(--space-xs) var(--space-3xl);
     }
@@ -42,27 +42,33 @@
   }
 
   #topLeftSquare {
-    grid-area: 1/1/2/2;
-    background-color: rgba(205, 148, 117, 0.5);
+    grid-area: 1 / 1 / 2 / 2;
+    .square {
+      width: var(--shape-xs);
+      height: var(--shape-xs);
+      margin-left: var(--space-3xl);
+      margin-top: var(--space-md);
+      background-color: var(--inverse-bg);
+    }
   }
 
   #topRightCircle {
-    grid-area: 2 / 7 / 4 / 9;
+    grid-area: 2 / 5 / 3 / 7;
     .circle {
       width: var(--shape-md);
       height: var(--shape-md);
-      background: var(--bauhaus-blue);
+      background: var(--bauhaus-red);
       border-radius: 50%;
     }
   }
 
   #bottomRightFormation {
-    grid-area: 8 / 8 / 10 / 10;
+    grid-area: 5 / 6 / 7 / 7;
     background-color: rgba(81, 35, 131, 0.5);
   }
 
   #midCircle {
-    grid-area: 7 / 5 / 9 / 7;
+    grid-area: 5 / 4 / 6 / 5;
     .circle {
       width: var(--shape-sm);
       height: var(--shape-sm);
@@ -72,7 +78,13 @@
   }
 
   #bottomRightSquare {
-    grid-area: 5 / 8 / 8 / 10;
-    background-color: rgba(239, 219, 178, 0.5);
+    grid-area: 3 / 5 / 5 / 7;
+    direction: rtl;
+    .square {
+      width: var(--shape-sm);
+      height: var(--shape-sm);
+      margin-right: var(--space-3xl);
+      background-color: var(--bauhaus-blue);
+    }
   }
 }
