@@ -5,7 +5,8 @@
     "start": "vite",
     "preview": "vite preview",
     "build": "vite build",
-    "deploy": "firebase deploy --only hosting"
+    "serve": "npm run build && firebase serve",
+    "deploy": "npm run build && firebase deploy --only hosting"
   },
   "devDependencies": {
     "firebase-tools": "^14.20.0",
