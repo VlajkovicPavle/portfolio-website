@@ -28,6 +28,9 @@
 
   #topRightCircle {
     grid-area: topright;
+    > div {
+      margin-top: var(--space-lg);
+    }
   }
 
   #infoLayout {
