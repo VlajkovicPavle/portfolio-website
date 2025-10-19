@@ -3,81 +3,48 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
-A minimalist portfolio website built with vanilla HTML, CSS, and JavaScript, inspired by Bauhaus design principles.
+Yes, this portfolio has a build system, CI/CD pipeline, and modular architecture. For three pages. It's intentionally overengineered because the _how_ demonstrates as much as the _what_.
 
-## Features
+## Philosophy
 
-- **Modern CSS** - Native nesting, CSS variables, and `light-dark()` for automatic theme switching
-- **Custom Typography** - Bayer Universal font with optimized preloading
-- **Bauhaus Aesthetic** - Clean geometric layouts with a focused color palette
-- **Zero Framework** - Pure web standards for maximum performance and simplicity
-- **Live Reload** - Browser-sync development server with hot reload
+**Form follows function.** Bauhaus taught us that design isn't decoration it's the visible expression of structure. This portfolio applies that principle at every level:
+
+- **Visual design**: Geometric primitives (circles, squares, triangles) arranged on a grid system
+- **Code architecture**: Modular sections with clear boundaries and single responsibilities
+- **CSS methodology**: BEM notation creates self documenting, reusable components
+- **Build process**: Every tool serves a purpose no complexity without intention
+
+The same discipline that produces clean layouts produces maintainable code. Bauhaus isn't just an aesthetic; it's a design process that eliminates the unnecessary and celebrates the essential.
+
+## Architecture
+
+Modular sections with colocated HTML/CSS. BEM notation for component naming. CSS variables with `light-dark()` for theme-aware design tokens. Geometric primitives (circles, squares, triangles) as composable classes. P22 Bayer Universal typography on CSS Grid layouts.
+
+## DevOps & Performance
+
+**Vite** provides fast HMR (~50ms updates), automatic minification, tree-shaking, and zero-config builds. **GitHub Actions** CI/CD pipeline builds on push to main and deploys to **Firebase Hosting**.
+
+**Build output**: ~10KB gzipped bundle with cache-busting hashes, 1-year cache headers for immutable assets, 3 HTTP requests total.
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (with native nesting)
-- Vanilla JavaScript
-- Browser-sync for development
-- Prettier for code formatting
+Vanilla JavaScript • Vite • CSS3 • Firebase Hosting • GitHub Actions
 
 ## Development
 
 ```bash
-npm install
-npm start
+npm install && npm start
 ```
 
-Opens at `http://localhost:3002` with live reload enabled.
+**Scripts**: `start` (dev) • `build` • `preview` • `serve` • `deploy`
 
 ## Deployment
 
-### Manual Deploy
-```bash
-npm run deploy
-```
+Push to `main` triggers GitHub Actions → Vite build → Firebase Hosting. Manual: `npm run deploy`
 
-### Automatic Deploy (GitHub Actions)
+---
 
-Pushes to `main` branch automatically deploy to Firebase Hosting.
-
-**Required GitHub Secrets:**
-- `FIREBASE_SERVICE_ACCOUNT` - Service account JSON (from Firebase Console → Project Settings → Service Accounts)
-- `FIREBASE_PROJECT_ID` - Your Firebase project ID
-
-**Setup:**
-1. Create Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
-2. Update `.firebaserc` with your project ID
-3. Generate service account key and add to GitHub secrets
-4. Push to `main` branch to trigger deployment
-
-## Design System
-
-### Colors
-
-- **Primary**: Bauhaus Red, Blue, Yellow
-- **Theme-aware**: Automatic light/dark mode support via CSS `color-scheme`
-- **Neutrals**: Adaptive backgrounds and text colors
-
-### Typography
-
-- **Font**: P22 Bayer Universal
-- **Style**: Geometric, modernist aesthetic
-
-## Project Structure
-
-```
-src/
-├── assets/fonts/          # Custom typography
-├── sections/              # Page sections (modular HTML/CSS)
-│   └── landing/
-├── index.html             # Entry point
-├── variables.css          # Design tokens
-├── styles.css             # Global styles
-└── main.js                # Dynamic section loading
-```
-
-## Philosophy
-
-Built with intentional simplicity. No build complexity, no framework overhead—just modern web standards and clean code.
+**Built with intentional complexity.** Every tool, every architecture decision, every line of code serves the dual purpose of creating a functional portfolio and demonstrating technical depth. Form follows function all the way down.
