@@ -1,7 +1,6 @@
-async function loadSection(id, file) {
-  const response = await fetch(`sections/${file}`);
-  const html = await response.text();
-  document.getElementById(id).innerHTML = html;
-}
+import landingHTML from "./sections/landing/landing.html?raw";
 
-loadSection("landing", "landing/landing.html");
+import "./sections/landing/landing.css";
+
+// Css is auto injected by Vite
+document.getElementById("landing").innerHTML = landingHTML;
