@@ -10,24 +10,36 @@
   width: 100%;
   height: 100vh;
 
-  #infoSection {
+  #topLeftSquare {
+    grid-area: 1 / 1 / 2 / 2;
+    > div {
+      margin-left: var(--space-3xl);
+      margin-top: var(--space-md);
+    }
+  }
+
+  #topRightCircle {
+    grid-area: 2 / 5 / 3 / 7;
+  }
+
+  #infoLayout {
     grid-area: 3 / 1 / 6 / 3;
     > div,
     h2,
     nav {
       margin: var(--space-sm) var(--space-sm) var(--space-xs) var(--space-3xl);
     }
-    #fullNameSection h1 {
+    #fullnameLayout h1 {
       font-family: var(--font-display);
       font-size: var(--text-5xl);
       line-height: 0.85;
     }
-    #workTitleSection {
+    #workTitleLayout {
       font-family: var(--font-body);
       margin-top: var(--space-xs);
       font-size: var(--text-lg);
     }
-    #linksSection {
+    #linksLayout {
       display: flex;
       margin-top: var(--space-xs);
       flex-direction: column;
@@ -57,16 +69,8 @@
     }
   }
 
-  #topLeftSquare {
-    grid-area: 1 / 1 / 2 / 2;
-    > div {
-      margin-left: var(--space-3xl);
-      margin-top: var(--space-md);
-    }
-  }
-
-  #topRightCircle {
-    grid-area: 2 / 5 / 3 / 7;
+  #midCircle {
+    grid-area: 5 / 4 / 6 / 5;
   }
 
   #bottomRightFormation {
@@ -78,10 +82,6 @@
     > * {
       margin-right: var(--space-3xl);
     }
-  }
-
-  #midCircle {
-    grid-area: 5 / 4 / 6 / 5;
   }
 
   #bottomRightSquare {
