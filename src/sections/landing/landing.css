@@ -59,23 +59,14 @@
 
   #topLeftSquare {
     grid-area: 1 / 1 / 2 / 2;
-    .square {
-      width: var(--shape-xs);
-      height: var(--shape-xs);
+    > div {
       margin-left: var(--space-3xl);
       margin-top: var(--space-md);
-      background-color: var(--inverse-bg);
     }
   }
 
   #topRightCircle {
     grid-area: 2 / 5 / 3 / 7;
-    .circle {
-      width: var(--shape-md);
-      height: var(--shape-md);
-      background: var(--bauhaus-red);
-      border-radius: 50%;
-    }
   }
 
   #bottomRightFormation {
@@ -84,40 +75,13 @@
     flex-direction: column;
     align-items: flex-end;
     gap: var(--space-xs);
-    .circle {
-      width: var(--shape-xs);
-      height: var(--shape-xs);
-      background: var(--bauhaus-red);
-      border-radius: 50%;
-    }
-    .square {
-      width: var(--shape-xs);
-      height: var(--shape-xs);
-      margin-right: var(--space-3xl);
-      background-color: var(--bauhaus-blue);
-    }
-    .triangle {
-      width: 0;
-      height: 0;
-      border-bottom: var(--shape-xs) solid var(--bauhaus-yellow);
-      border-left: calc(var(--shape-xs) / 2) solid transparent;
-      border-right: calc(var(--shape-xs) / 2) solid transparent;
-    }
-    .circle,
-    .square,
-    .triangle {
+    > * {
       margin-right: var(--space-3xl);
     }
   }
 
   #midCircle {
     grid-area: 5 / 4 / 6 / 5;
-    .circle {
-      width: var(--shape-sm);
-      height: var(--shape-sm);
-      background: var(--bauhaus-yellow);
-      border-radius: 50%;
-    }
   }
 
   #bottomRightSquare {
@@ -125,11 +89,8 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    .square {
-      width: var(--shape-sm);
-      height: var(--shape-sm);
+    > * {
       margin-right: var(--space-3xl);
-      background-color: var(--bauhaus-blue);
     }
   }
 }
