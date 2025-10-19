@@ -2,6 +2,8 @@
 @import "./utils/shapes.css";
 @import "./utils/animations.css";
 @import "./sections/landing/landing.css";
+@import "./sections/about/about.css";
+@import "./sections/work/work.css";
 
 /* Bayer Universal - Display Font */
 @font-face {

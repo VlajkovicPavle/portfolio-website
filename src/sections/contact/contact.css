@@ -1,0 +1,7 @@
+#contact {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
