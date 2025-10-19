@@ -1,31 +1,56 @@
-@import "../../variables.css";
+/* ============================================
+   Landing section 
+   ============================================ */
 
 #landing-page-layout {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "topleft  .     .   .   topright  topright"
+    ".        .     .   .   topright  topright"
+    "info     info  .   bottomsq   bottomsq  ."
+    "info     info  .   bottomsq   bottomsq  ."
+    "info     info  .   mid .         formation"
+    ".        .     .   .   .         formation";
+
   gap: var(--space-xs);
   width: 100%;
   height: 100vh;
 
-  #infoSection {
-    grid-area: 3 / 1 / 6 / 3;
+  #topLeftSquare {
+    grid-area: topleft;
+    > div {
+      margin-left: var(--space-3xl);
+      margin-top: var(--space-md);
+    }
+  }
+
+  #topRightCircle {
+    grid-area: topright;
+    > div {
+      margin-top: var(--space-lg);
+    }
+  }
+
+  #infoLayout {
+    grid-area: info;
     > div,
     h2,
     nav {
       margin: var(--space-sm) var(--space-sm) var(--space-xs) var(--space-3xl);
     }
-    #fullNameSection h1 {
+    #fullnameLayout h1 {
       font-family: var(--font-display);
       font-size: var(--text-5xl);
       line-height: 0.85;
     }
-    #workTitleSection {
+    #workTitleLayout {
       font-family: var(--font-body);
       margin-top: var(--space-xs);
       font-size: var(--text-lg);
     }
-    #linksSection {
+    #linksLayout {
       display: flex;
       margin-top: var(--space-xs);
       flex-direction: column;
@@ -55,79 +80,31 @@
     }
   }
 
-  #topLeftSquare {
-    grid-area: 1 / 1 / 2 / 2;
-    .square {
-      width: var(--shape-xs);
-      height: var(--shape-xs);
-      margin-left: var(--space-3xl);
-      margin-top: var(--space-md);
-      background-color: var(--inverse-bg);
-    }
-  }
-
-  #topRightCircle {
-    grid-area: 2 / 5 / 3 / 7;
-    .circle {
-      width: var(--shape-md);
-      height: var(--shape-md);
-      background: var(--bauhaus-red);
-      border-radius: 50%;
-    }
+  #midCircle {
+    grid-area: mid;
+    align-self: self-end;
   }
 
   #bottomRightFormation {
-    grid-area: 5 / 6 / 7 / 7;
+    grid-area: formation;
+    align-self: end;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: var(--space-xs);
-    .circle {
-      width: var(--shape-xs);
-      height: var(--shape-xs);
-      background: var(--bauhaus-red);
-      border-radius: 50%;
-    }
-    .square {
-      width: var(--shape-xs);
-      height: var(--shape-xs);
-      margin-right: var(--space-3xl);
-      background-color: var(--bauhaus-blue);
-    }
-    .triangle {
-      width: 0;
-      height: 0;
-      border-bottom: var(--shape-xs) solid var(--bauhaus-yellow);
-      border-left: calc(var(--shape-xs) / 2) solid transparent;
-      border-right: calc(var(--shape-xs) / 2) solid transparent;
-    }
-    .circle,
-    .square,
-    .triangle {
-      margin-right: var(--space-3xl);
-    }
-  }
-
-  #midCircle {
-    grid-area: 5 / 4 / 6 / 5;
-    .circle {
-      width: var(--shape-sm);
-      height: var(--shape-sm);
-      background: var(--bauhaus-yellow);
-      border-radius: 50%;
+    > * {
+      margin-right: var(--space-md);
+      margin-bottom: var(--space-xs);
     }
   }
 
   #bottomRightSquare {
-    grid-area: 3 / 5 / 5 / 7;
+    grid-area: bottomsq;
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    .square {
-      width: var(--shape-sm);
-      height: var(--shape-sm);
-      margin-right: var(--space-3xl);
-      background-color: var(--bauhaus-blue);
+    > * {
+      margin-right: var(--space-md);
     }
   }
 }

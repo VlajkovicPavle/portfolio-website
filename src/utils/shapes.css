@@ -1,0 +1,74 @@
+/* ========================================= 
+   Shape css utility classes
+  ========================================== */
+
+.shape {
+  display: block;
+}
+
+.shape--circle {
+  border-radius: 50%;
+}
+
+.shape--triangle {
+  width: 0;
+  height: 0;
+  border-left: calc(var(--triangle-size, var(--shape-xs)) / 2) solid transparent;
+  border-right: calc(var(--triangle-size, var(--shape-xs)) / 2) solid
+    transparent;
+  border-bottom: var(--triangle-size, var(--shape-xs)) solid
+    var(--triangle-color, currentColor);
+  background: transparent !important; /* Override background colors for triangles */
+}
+
+/* Size modifiers - define dimensions */
+.shape--xs {
+  width: var(--shape-xs);
+  height: var(--shape-xs);
+  --triangle-size: var(--shape-xs); /* For triangles */
+}
+
+.shape--sm {
+  width: var(--shape-sm);
+  height: var(--shape-sm);
+  --triangle-size: var(--shape-sm);
+}
+
+.shape--md {
+  width: var(--shape-md);
+  height: var(--shape-md);
+  --triangle-size: var(--shape-md);
+}
+
+.shape--lg {
+  width: var(--shape-lg);
+  height: var(--shape-lg);
+  --triangle-size: var(--shape-lg);
+}
+
+.shape--xl {
+  width: var(--shape-xl);
+  height: var(--shape-xl);
+  --triangle-size: var(--shape-xl);
+}
+
+/* Color modifiers - define background color */
+.shape--red {
+  background: var(--bauhaus-red);
+  --triangle-color: var(--bauhaus-red);
+}
+
+.shape--blue {
+  background: var(--bauhaus-blue);
+  --triangle-color: var(--bauhaus-blue);
+}
+
+.shape--yellow {
+  background: var(--bauhaus-yellow);
+  --triangle-color: var(--bauhaus-yellow);
+}
+
+.shape--inverse {
+  background: var(--inverse-bg);
+  --triangle-color: var(--inverse-bg);
+}

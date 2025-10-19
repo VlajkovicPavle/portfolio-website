@@ -1,4 +1,7 @@
 @import "./variables.css";
+@import "./utils/shapes.css";
+@import "./utils/animations.css";
+@import "./sections/landing/landing.css";
 
 /* Bayer Universal - Display Font */
 @font-face {
